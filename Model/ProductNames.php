@@ -4,7 +4,7 @@ namespace PAI\Model;
 require_once "Config/Db.php";
 use PAI\Config;
 
-class Products {
+class ProductNames {
     protected $db;
 
     function __construct(){
