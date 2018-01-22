@@ -1,12 +1,13 @@
 <body>
-    <div id="header" class="header_grid">
+    <div id="header">
         <div id="l_space"></div>    
         <div id="logo">
             <img src="Resources/img/logo.png"/>
         </div>
         <div id="header_freespace"> 
         </div>
-
+        <div class="login_box">
+        
         <?php
             if (isset($_SESSION['userid'])) {
                 include "View/welcome.php";
@@ -14,10 +15,11 @@
                 include "View/login.php";
             }
         ?>
-        
+
+        </div>
         <div id="r_space"></div>
     </div>
-    <div id="body" class="body_grid">
+    <div id="body">
         <div id="l_space"></div>
            
         <?php

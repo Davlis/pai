@@ -31,17 +31,7 @@ a, a:visited {
 
 /*--- Inputs ---*/
 
-#login > form > input {
-    border-color: #0c5492;
-    background-color: #e1eef9;
-}
-
-#register > form > input {
-    border-color: #7eb6e5;
-    background-color: #fcfdfe;
-}
-
-.input_box {
+input {
     display: block;
     width: 100%;
 
@@ -55,7 +45,7 @@ a, a:visited {
     font-size: 11px;
 }
 
-.input_button {
+button {
     display: block;
     width: 100%;
 
@@ -68,14 +58,27 @@ a, a:visited {
     font-size: 12px;
 }
 
-#header .input_button:hover,
-#header .input_button:focus {
+
+#header input,
+#header button {
+    border-color: #0c5492;
+    background-color: #e1eef9;
+}
+
+#header button:hover,
+#header button:focus {
     color: #cad6e0;
     background-color: #0c5492;
 }
 
-#register .input_button:hover,
-#register .input_button:focus {
+#body input,
+#body button {
+    border-color: #7eb6e5;
+    background-color: #fcfdfe;
+}
+
+#body button:hover,
+#body button:focus {
     color: #fcfdfe;
     background-color: #7eb6e5;
 }
@@ -83,18 +86,26 @@ a, a:visited {
 /*--- Areas ---*/
 
 #header {
+    display: grid;
+    grid: 'l_space logo header_freespace login r_space';
+    grid-template-columns: 3% 100px auto 30% 3%;
+    
     margin: 0;
     padding: 12px 0;
     background-color: #2986d5;
 }
 
 #logo {
+    grid-area: logo;
+
     width: 100px;
     height: 100px;
     margin: auto 0;
 }
 
-#login, #welcome{
+.login_box {
+    grid-area: login;
+    
     padding: 6px;
     margin: auto 0;
 
@@ -102,19 +113,38 @@ a, a:visited {
     box-shadow: 6px -2px 13px 0 rgba(0,0,0,0.2), -6px 2px 13px 0 rgba(0,0,0,0.2);
 }
 
-#welcome {
-    padding: 6px 10px;
+.text_box{
+    padding: 10px;
+    margin: 1px;
+    background-color: rgba(255,255,255, 0.16);
+    width: inherit;
 }
 
 #body {
+    display: grid;
+    grid: 'l_space content r_space';
+    grid-template-columns: 17% auto 17%;
+    
     padding: 20px 0;
 }
 
 #register { 
+    grid-area: content;
+
     padding: 15px;
 }
 
-.error {
+#content {
+    grid-area: content;
+
+    display: grid;
+    grid: 'menu script';
+    grid-template-columns: 25% auto;
+    grid-auto-rows: auto;
+}
+
+.error, 
+.error > a {
     box-sizing: content-box;
     text-align: center;
     font-style: italic;
@@ -137,32 +167,6 @@ a, a:visited {
     margin: auto;
 }
 
-/*--- Grids ---*/
-
-.header_grid {
-    display: grid;
-    grid: 'l_space logo header_freespace login r_space';
-    grid-template-columns: 3% 100px auto 30% 3%;
-}
-
-.body_grid {
-    display: grid;
-    grid: 'l_space content r_space';
-    grid-template-columns: 17% auto 17%;
-}
-
-.menu_grid {
-    display: grid;
-    grid: 'menu script';
-    grid-template-columns: 25% auto;
-    grid-auto-rows: auto;
-}
-
-#logo { grid-area: logo; }
-#login, #welcome { grid-area: login; }
-#register, #content { grid-area: content; }
-#menu { grid-area: menu; align-self: start; margin-bottom: auto;}
-#script { grid-area: script; }
 #header_freespace { grid-area: header_freespace; }
 #l_space { grid-area: l_space; }
 #r_space { grid-area: r_space; }
@@ -170,7 +174,10 @@ a, a:visited {
 /*--- Menu ---*/
 
 #menu { 
-    height: 100%;
+    grid-area: menu;
+    align-self: start;
+
+    height: auto;
     padding: 0;
     background-color: #cfd8e1; /*rgba(160, 193, 236, 0.2);*/
     /*box-shadow: 6px -2px 13px 0 rgba(0,0,0,0.2), -6px 2px 13px 0 rgba(0,0,0,0.2);*/
@@ -188,11 +195,12 @@ a, a:visited {
     border-bottom: solid 2px #a1a8af;
 }
 
-#last_box.menu_box {
+.menu_box:last-of-type {
     border: none;
 }
 
-.menu_box a {
+.menu_box a,
+.menu_box a:visited  {
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -201,23 +209,18 @@ a, a:visited {
     text-align: center;
     vertical-align: middle;
     line-height: 60px;
+
+    cursor: pointer;
 }
 
 .menu_box a:hover {
     background-color: #b8c0c8;
-    cursor: pointer;
-}
-
-.menu_box a:visited {
-    color: #73787d;
 }
 
 /*--- Scripts ---*/
 
 #script {
-    padding: 0 3%;
-}
+    grid-area: script;
 
-#script .error a {
-    color: #ee0033;
+    padding: 0 3%;
 }

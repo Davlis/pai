@@ -1,4 +1,4 @@
-<div id="content" class="menu_grid">
+<div id="content">
     <div id="menu">
 
     <?php
@@ -6,7 +6,7 @@
         //echo '<div class="menu_box"><a href="./menu_action.php?action=receipt_add">Add Receipt</a></div>';    
 
         if($_SESSION['isAdmin']){
-            echo '<div id="last_box" class="menu_box"><a href="./menu_action.php?action=delete_users">Delete Users</a></div>';
+            echo '<div class="menu_box"><a href="./menu_action.php?action=delete_users">Delete Users</a></div>';
         }
     ?>
 

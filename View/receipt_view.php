@@ -18,5 +18,6 @@
         
         echo '<a href="./receipt_view.php?id=' . $id . '">' . $r_str . "</a><br/>";
     }
-    echo '<span><button class="input_button" action="./receipt_add.php">Add Receipt</button></span>';
+    echo '<span></span>';
 ?>
+<form action="./receipt_controller.php" method="get"><button type="submit">Add Receipt</button></form>
