@@ -8,7 +8,7 @@ class Receipts {
     protected $db;
 
     function __construct(){
-        $this->db = new \PAI\Db;
+        $this->db = new \PAI\Config\Db;
     }
 
     function getReceiptsForUser($userid) {
