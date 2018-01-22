@@ -16,6 +16,11 @@ class ProductNames {
         return $this -> db -> oneResultQuery($q);
     }
 
+    function getName($id){
+        $q = "select productname from productnames where id = $id";
+        return $this -> db -> oneResultQuery($q);
+    }
+
     function insertProductName($name) {
         $q = "insert into productnames (productname) values ('$name')";
         return $this -> db -> query($q);

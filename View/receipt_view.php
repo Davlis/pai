@@ -6,17 +6,26 @@
     use PAI\Model;
 
     $receipts = new \PAI\Model\Receipts;
-    $userreceipts = $receipts -> getReceiptsForUser($_SESSION['userid']);
+    $products = new \PAI\Model\Products;
+    $names = new \PAI\Model\ProductNames;
+
+    $receiptid = $_session['receiptid'];
+    $producttable = $products -> getProductsForReceipt($receiptid);
 ?>
 
 <h1>Your Receipts:</h1>
-<form action="./receipt_controller.php" method="post">
+
+
+
+
+
+
+<form action="./product_controller.php" method="post">
 
     <?php
-        foreach($userreceipts as $id){
-            $r_str = '<span>' . $receipts -> getName($id) . ", " . $receipts -> getSum($id) . " PLN</span>";
+        foreach($producttable as $productid){
+            $r_str = '<span>' . $names -> getName($products -> getNameID($productid)) . ", bought " . $products -> getQuantity($productid)." for " . $products -> getPrice($productid) . " PLN</span>";
             
-            $view = '<span><button type="submit" name="view" value=' . $id . '>View</button></span>';
             $edit = '<span><button type="submit" name="edit" value=' . $id . '>Edit</button></span>';
             $remove = '<span><button type="submit" name="remove" value=' . $id . '>Remove</button></span>';
 
@@ -26,5 +35,5 @@
         }
     ?>
 
-    <button type="submit" name="add">Add Receipt</button>
+    <button type="submit" name="add">Add Product</button>
 </form>

@@ -2,7 +2,7 @@
     <div id="menu">
 
     <?php
-        echo '<div class="menu_box"><a href="./menu_action.php?action=receipt_view">Receipts</a></div>';
+        echo '<div class="menu_box"><a href="./menu_action.php?action=receipt">Receipts</a></div>';
         //echo '<div class="menu_box"><a href="./menu_action.php?action=receipt_add">Add Receipt</a></div>';    
 
         if($_SESSION['isAdmin']){

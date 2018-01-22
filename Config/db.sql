@@ -116,7 +116,7 @@ begin
 
   select sum(quantity * price) into f_sum from products where receiptid = f_receiptid;
   update receipts set r_sum = f_sum where id = f_receiptid;
-
+  return new;
 end;
 $$ language PLPGSQL volatile;
 
