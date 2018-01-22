@@ -84,9 +84,10 @@ create table usersessions(
 create table receipts(
   id serial not null primary key unique,
   userid integer not null references users(id),
-  datestamp date,
-  shopid integer not null references shops(id),
-  sum float not null
+  datestamp date not null default current_date,
+  shopid integer references shops(id),
+  r_sum float not null default 0,
+  namefield text not null default 'Receipt'
 );
 
 create table productnames(
@@ -98,37 +99,32 @@ create table products(
   id serial not null primary key unique,
   productnameid integer not null references productnames(id),
   receiptid integer not null references receipts(id),
-  quantity integer not null,
+  quantity float not null,
   price float not null
 );
 
 create or replace function update_sum() returns trigger as $$
+declare
+  f_receiptid integer;
+  f_sum float;
 begin
+  if TG_OP = 'DELETE' then 
+    f_receiptid := OLD.receiptid;
+  else 
+    f_receiptid := NEW.receiptid;
+  end if;
 
+  select sum(quantity * price) into f_sum from products where receiptid = f_receiptid;
+  update receipts set r_sum = f_sum where id = f_receiptid;
 
 end;
 $$ language PLPGSQL volatile;
 
-
-
-CREATE OR REPLACE FUNCTION rec_insert()
-  RETURNS trigger AS
-$$
-BEGIN
-         INSERT INTO emp_log(emp_id,salary,edittime)
-         VALUES(NEW.employee_id,NEW.salary,current_date);
- 
-    RETURN NEW;
-END;
-$$
-LANGUAGE 'plpgsql';
-
 create trigger update_sum_trigger
-  after insert or delete or update 
+  after insert or update or delete
   on products
   for each row
   execute procedure update_sum();
-
 
 insert into userprivileges (privilegename) values ('Admin');
 insert into userprivileges (privilegename) values ('User');

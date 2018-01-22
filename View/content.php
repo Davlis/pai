@@ -2,8 +2,8 @@
     <div id="menu">
 
     <?php
-        echo '<div class="menu_box"><a href="./menu_action.php?action=view_receipts">View Receipts</a></div>';
-        echo '<div class="menu_box"><a href="./menu_action.php?action=add_receipt">Add Receipt</a></div>';    
+        echo '<div class="menu_box"><a href="./menu_action.php?action=receipt_view">Receipts</a></div>';
+        //echo '<div class="menu_box"><a href="./menu_action.php?action=receipt_add">Add Receipt</a></div>';    
 
         if($_SESSION['isAdmin']){
             echo '<div id="last_box" class="menu_box"><a href="./menu_action.php?action=delete_users">Delete Users</a></div>';
@@ -21,9 +21,7 @@
         
         if(isset($_SESSION['action'])){
             $script = "View/" . $_SESSION['action'] . ".php";
-            if (!(include $script)) {
-                $_SESSION['debug'] = $_SESSION['debug'] . "<br/>No view action script located";
-            }
+            include $script;
         }
     ?>
 
