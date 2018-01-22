@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="pai@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="pai">
+      <ObjectId>16745</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13255</ObjectId>
+    </database>
+    <role id="4" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="5" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="10" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-01-13.02:04:16.453</IntrospectionTimestamp>
+      <IntrospectionStateNumber>624</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="11" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="information_schema">
+      <ObjectId>12965</ObjectId>
+    </schema>
+    <sequence id="16" parent="10" name="addresses_id_seq">
+      <ObjectId>17639</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="17" parent="10" name="cities_id_seq">
+      <ObjectId>17615</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="18" parent="10" name="countries_id_seq">
+      <ObjectId>17602</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="19" parent="10" name="malls_id_seq">
+      <ObjectId>17671</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="20" parent="10" name="postcodes_id_seq">
+      <ObjectId>17631</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="21" parent="10" name="productnames_id_seq">
+      <ObjectId>17787</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="22" parent="10" name="products_id_seq">
+      <ObjectId>17798</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="23" parent="10" name="receipts_id_seq">
+      <ObjectId>17769</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="24" parent="10" name="shopnames_id_seq">
+      <ObjectId>17660</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="25" parent="10" name="shops_id_seq">
+      <ObjectId>17687</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="26" parent="10" name="userlogs_id_seq">
+      <ObjectId>17737</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="27" parent="10" name="userprivileges_id_seq">
+      <ObjectId>17710</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="28" parent="10" name="users_id_seq">
+      <ObjectId>17721</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="29" parent="10" name="usersessions_id_seq">
+      <ObjectId>17753</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="30" parent="10" name="addresses">
+      <ObjectId>17641</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="31" parent="10" name="cities">
+      <ObjectId>17617</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="32" parent="10" name="countries">
+      <ObjectId>17604</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="33" parent="10" name="malls">
+      <ObjectId>17673</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="34" parent="10" name="postcodes">
+      <ObjectId>17633</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="35" parent="10" name="productnames">
+      <ObjectId>17789</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="36" parent="10" name="products">
+      <ObjectId>17800</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="37" parent="10" name="receipts">
+      <ObjectId>17771</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="38" parent="10" name="shopnames">
+      <ObjectId>17662</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="39" parent="10" name="shops">
+      <ObjectId>17689</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="40" parent="10" name="userlogs">
+      <ObjectId>17739</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="41" parent="10" name="userprivileges">
+      <ObjectId>17712</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="42" parent="10" name="users">
+      <ObjectId>17723</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <table id="43" parent="10" name="usersessions">
+      <ObjectId>17755</ObjectId>
+      <StateNumber>624</StateNumber>
+    </table>
+    <column id="44" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;addresses_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>addresses_id_seq</SequenceName>
+    </column>
+    <column id="45" parent="30" name="cityid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="46" parent="30" name="street">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="47" parent="30" name="postcodeid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="48" parent="30" name="addresses_pkey">
+      <ObjectId>17648</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="49" parent="30" name="addresses_pkey">
+      <ObjectId>17649</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>addresses_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="30" name="addresses_cityid_fkey">
+      <ObjectId>17650</ObjectId>
+      <ColNames>cityid</ColNames>
+      <RefTableId>17617</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cities</RefTableName>
+      <RefKeyName>cities_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="51" parent="30" name="addresses_postcodeid_fkey">
+      <ObjectId>17655</ObjectId>
+      <ColNames>postcodeid</ColNames>
+      <RefTableId>17633</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>postcodes</RefTableName>
+      <RefKeyName>postcodes_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="52" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;cities_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>cities_id_seq</SequenceName>
+    </column>
+    <column id="53" parent="31" name="cityname">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="54" parent="31" name="countryid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="55" parent="31" name="cities_pkey">
+      <ObjectId>17624</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="31" name="cities_pkey">
+      <ObjectId>17625</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cities_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="57" parent="31" name="cities_countryid_fkey">
+      <ObjectId>17626</ObjectId>
+      <ColNames>countryid</ColNames>
+      <RefTableId>17604</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>countries</RefTableName>
+      <RefKeyName>countries_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="58" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;countries_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>countries_id_seq</SequenceName>
+    </column>
+    <column id="59" parent="32" name="countryname">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="60" parent="32" name="countries_pkey">
+      <ObjectId>17611</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="61" parent="32" name="countries_countryname_key">
+      <ObjectId>17613</ObjectId>
+      <ColNames>countryname</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="32" name="countries_pkey">
+      <ObjectId>17612</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>countries_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="63" parent="32" name="countries_countryname_key">
+      <ObjectId>17614</ObjectId>
+      <ColNames>countryname</ColNames>
+      <UnderlyingIndexName>countries_countryname_key</UnderlyingIndexName>
+    </key>
+    <column id="64" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;malls_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>malls_id_seq</SequenceName>
+    </column>
+    <column id="65" parent="33" name="mallname">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="66" parent="33" name="addressid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="67" parent="33" name="malls_pkey">
+      <ObjectId>17680</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="33" name="malls_pkey">
+      <ObjectId>17681</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>malls_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="69" parent="33" name="malls_addressid_fkey">
+      <ObjectId>17682</ObjectId>
+      <ColNames>addressid</ColNames>
+      <RefTableId>17641</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>addresses</RefTableName>
+      <RefKeyName>addresses_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="70" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;postcodes_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>postcodes_id_seq</SequenceName>
+    </column>
+    <column id="71" parent="34" name="postcode">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="72" parent="34" name="postcodes_pkey">
+      <ObjectId>17637</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="73" parent="34" name="postcodes_pkey">
+      <ObjectId>17638</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>postcodes_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="74" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;productnames_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>productnames_id_seq</SequenceName>
+    </column>
+    <column id="75" parent="35" name="productname">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="76" parent="35" name="productnames_pkey">
+      <ObjectId>17796</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="35" name="productnames_pkey">
+      <ObjectId>17797</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>productnames_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="78" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;products_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>products_id_seq</SequenceName>
+    </column>
+    <column id="79" parent="36" name="productnameid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="80" parent="36" name="receiptid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="81" parent="36" name="quantity">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="82" parent="36" name="price">
+      <Position>5</Position>
+      <DataType>double precision|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="83" parent="36" name="products_pkey">
+      <ObjectId>17804</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="84" parent="36" name="products_pkey">
+      <ObjectId>17805</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>products_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="85" parent="36" name="products_productnameid_fkey">
+      <ObjectId>17806</ObjectId>
+      <ColNames>productnameid</ColNames>
+      <RefTableId>17789</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>productnames</RefTableName>
+      <RefKeyName>productnames_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="86" parent="36" name="products_receiptid_fkey">
+      <ObjectId>17811</ObjectId>
+      <ColNames>receiptid</ColNames>
+      <RefTableId>17771</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>receipts</RefTableName>
+      <RefKeyName>receipts_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="87" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;receipts_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>receipts_id_seq</SequenceName>
+    </column>
+    <column id="88" parent="37" name="userid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="89" parent="37" name="datestamp">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>624</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="90" parent="37" name="shopid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="91" parent="37" name="sum">
+      <Position>5</Position>
+      <DataType>double precision|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="92" parent="37" name="receipts_pkey">
+      <ObjectId>17775</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="93" parent="37" name="receipts_pkey">
+      <ObjectId>17776</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>receipts_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="94" parent="37" name="receipts_userid_fkey">
+      <ObjectId>17777</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableId>17723</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="95" parent="37" name="receipts_shopid_fkey">
+      <ObjectId>17782</ObjectId>
+      <ColNames>shopid</ColNames>
+      <RefTableId>17689</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>shops</RefTableName>
+      <RefKeyName>shops_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="96" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;shopnames_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>shopnames_id_seq</SequenceName>
+    </column>
+    <column id="97" parent="38" name="shopname">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="98" parent="38" name="shopnames_pkey">
+      <ObjectId>17669</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="99" parent="38" name="shopnames_pkey">
+      <ObjectId>17670</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>shopnames_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="100" parent="39" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;shops_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>shops_id_seq</SequenceName>
+    </column>
+    <column id="101" parent="39" name="shopnameid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="102" parent="39" name="addressid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="103" parent="39" name="mallid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="104" parent="39" name="shops_pkey">
+      <ObjectId>17693</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="105" parent="39" name="shops_pkey">
+      <ObjectId>17694</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>shops_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="106" parent="39" name="shops_shopnameid_fkey">
+      <ObjectId>17695</ObjectId>
+      <ColNames>shopnameid</ColNames>
+      <RefTableId>17662</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>shopnames</RefTableName>
+      <RefKeyName>shopnames_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="107" parent="39" name="shops_addressid_fkey">
+      <ObjectId>17700</ObjectId>
+      <ColNames>addressid</ColNames>
+      <RefTableId>17641</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>addresses</RefTableName>
+      <RefKeyName>addresses_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="108" parent="39" name="shops_mallid_fkey">
+      <ObjectId>17705</ObjectId>
+      <ColNames>mallid</ColNames>
+      <RefTableId>17673</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>malls</RefTableName>
+      <RefKeyName>malls_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="109" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;userlogs_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>userlogs_id_seq</SequenceName>
+    </column>
+    <column id="110" parent="40" name="timepoint">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="111" parent="40" name="userid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="112" parent="40" name="ip">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="113" parent="40" name="userlogs_pkey">
+      <ObjectId>17746</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="114" parent="40" name="userlogs_pkey">
+      <ObjectId>17747</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>userlogs_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="115" parent="40" name="userlogs_userid_fkey">
+      <ObjectId>17748</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableId>17723</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="116" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;userprivileges_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>userprivileges_id_seq</SequenceName>
+    </column>
+    <column id="117" parent="41" name="privilegename">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="118" parent="41" name="userprivileges_pkey">
+      <ObjectId>17719</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="119" parent="41" name="userprivileges_pkey">
+      <ObjectId>17720</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>userprivileges_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="120" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>users_id_seq</SequenceName>
+    </column>
+    <column id="121" parent="42" name="email">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="122" parent="42" name="pass">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="123" parent="42" name="privilegeid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="124" parent="42" name="users_pkey">
+      <ObjectId>17730</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="125" parent="42" name="users_pkey">
+      <ObjectId>17731</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="126" parent="42" name="users_privilegeid_fkey">
+      <ObjectId>17732</ObjectId>
+      <ColNames>privilegeid</ColNames>
+      <RefTableId>17712</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>userprivileges</RefTableName>
+      <RefKeyName>userprivileges_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="127" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <DefaultExpression>nextval(&apos;usersessions_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>usersessions_id_seq</SequenceName>
+    </column>
+    <column id="128" parent="43" name="ssid">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="129" parent="43" name="userid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="130" parent="43" name="usersessions_pkey">
+      <ObjectId>17762</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="131" parent="43" name="usersessions_pkey">
+      <ObjectId>17763</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>usersessions_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="132" parent="43" name="usersessions_userid_fkey">
+      <ObjectId>17764</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableId>17723</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
