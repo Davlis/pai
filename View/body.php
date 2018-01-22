@@ -4,8 +4,7 @@
         <div id="logo">
             <img src="Resources/img/logo.png"/>
         </div>
-        <div id="header_freespace"> 
-        </div>
+        <div id="header_freespace"></div>
         <div class="login_box">
         
         <?php

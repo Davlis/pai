@@ -83,6 +83,13 @@ button {
     background-color: #7eb6e5;
 }
 
+span > button {
+    display: inline-block;
+    width: auto;
+    float: right;
+    margin-left: 4px;
+}
+
 /*--- Areas ---*/
 
 #header {
@@ -113,11 +120,16 @@ button {
     box-shadow: 6px -2px 13px 0 rgba(0,0,0,0.2), -6px 2px 13px 0 rgba(0,0,0,0.2);
 }
 
-.text_box{
-    padding: 10px;
-    margin: 1px;
+#header .text_box{
+    display: inline-block;
+    
+    width: auto;
+    padding: 3px 5px;
+    margin: 0 auto 4px;
+
     background-color: rgba(255,255,255, 0.16);
-    width: inherit;
+    border: solid 1px #2986d5;
+    border-radius: 3px;
 }
 
 #body {
@@ -201,15 +213,15 @@ button {
 
 .menu_box a,
 .menu_box a:visited  {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
     height: 100%;
     width: 100%;
 
     color: #73787d;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 60px;
-
     cursor: pointer;
 }
 
@@ -223,4 +235,8 @@ button {
     grid-area: script;
 
     padding: 0 3%;
+}
+
+.receipt_box {
+    margin: 4px 0;
 }
