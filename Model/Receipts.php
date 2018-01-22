@@ -16,8 +16,13 @@ class Receipts {
         return $this -> db -> getColumn($q);
     }
 
-    function insertReceipt($userid, $name=null, $datestamp=null, $shopid = null){
+    function insertReceipt($userid, $name=null, $datestamp=null, $shopid = null) {
         $q = "insert into receipts (userid, namefield, datestamp, shopid) values ($userid, $name, $datestamp, $shopid)";
+        return $this -> db -> query($q);
+    }
+
+    function updateReceipt($receiptid, $name=null, $datestamp=null, $shopid = null) {
+        $q = "update receipts set namefield=$name, datestamp=$datestamp, shopid=$shopid where id = $receiptid";
         return $this -> db -> query($q);
     }
 

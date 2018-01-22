@@ -1,19 +1,22 @@
 <?php
     namespace PAI;
-    include_once "Model/Users.php";
+    include_once "Model/Receipts.php";
+    include_once "Model/Products.php";
+    include_once "Model/ProductNames.php";
     use PAI\Model;
 
-    $users = new \PAI\Model\Users;
-    $usertable = $users -> getAllUserID();
+    $receipts = new \PAI\Model\Receipts;
+    $userreceipts = $receipts -> getReceiptsForUser($_SESSION['userid']);
+
 
     //var_dump($usertable);
 
-    echo "<h1>Delete User:</h1>";
+    echo "<h1>Your Receipts:</h1>";
 
-    foreach($usertable as $userid){
-        $active = $users -> isActive($userid) ? ", activated" : ", not activated";
-        $user = $users -> getName($userid) . ", " . $users -> getEmail($userid) . $active;
+    foreach($userreceipts as $id){
+        $r_str = $receipts -> getName($userid) . ", " . $receipt -> getSum($userid) . "PLN";
         
-        echo '<a href="./delete_users.php?id=' . $userid . '">' . $user . "</a><br/>";
+        echo '<a href="./receipt_view.php?id=' . $id . '">' . $r_str . "</a><br/>";
     }
+    echo '<span><button class="input_button" action="./receipt_add.php">Add Receipt</button></span>';
 ?>
